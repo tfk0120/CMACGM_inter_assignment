@@ -1,0 +1,158 @@
+{
+	"info": {
+		"_postman_id": "4194417d-095c-4a22-89bf-8259f6e058f1",
+		"name": "CustomersAPITesting",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User register {{host}}/user/register",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "User login {{host}}/user/login",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "List customers {{host}}/customer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyLXRlc3QiLCJleHAiOjE2Mzg3NTU3NzcsImlhdCI6MTYzNjE2Mzc3N30.HE9FEVxE7x8m_yYzmaXv1n6jFu4H8mbZ5XBP8vSNkqh8YEgW0mPK6BqpDypoOKigwjfL0IowE0vW512gFQjsng",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/customer",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"customer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch customer {{host}}/customer/{{id}}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/customer/{{id}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"customer",
+						"{{id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add customer {{host}}/customer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/customer",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"customer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete customer {{host}}/customer/{{id}}",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/customer/{{id}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"customer",
+						"{{id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit customer {{host}}/customer/{{id}}",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/customer/{{id}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"customer",
+						"{{id}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer"
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "localhost:8080"
+		},
+		{
+			"key": "id",
+			"value": "1"
+		}
+	]
+}
